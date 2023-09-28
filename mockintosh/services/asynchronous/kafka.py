@@ -102,7 +102,7 @@ class KafkaConsumerGroup(AsyncConsumerGroup):
         config = {
             'bootstrap.servers': first_actor.service.address,
             'group.id': '0',
-            'auto.offset.reset': 'earliest'
+            'auto.offset.reset': 'earliest',
             **first_actor.service.extra_kwargs,
         }
         if first_actor.service.ssl:
